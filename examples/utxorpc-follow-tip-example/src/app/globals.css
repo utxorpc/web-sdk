@@ -2,6 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  transition: all 0.5s ease-out;
+}
+
+/* Style the scrollbar itself (optional) */
+::-webkit-scrollbar {
+  width: 12px; /* or any suitable width */
+}
+
+/* Style the track of the scrollbar */
+::-webkit-scrollbar-track {
+  background: transparent; /* Makes the track background transparent */
+}
+
+/* Style the thumb of the scrollbar */
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3); /* Semi-transparent black, adjust as needed */
+  border-radius: 6px; /* Optional: to make the thumb corners rounded */
+  width: 10px;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -24,4 +45,89 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes highlightBlock {
+  from {
+    background-color: #ffff99; /* Bright yellow background */
+    transform: scale(1.1); /* Slightly larger size */
+  }
+  to {
+    transform: scale(1); /* Normal size */
+  }
+}
+
+.slide-in {
+  animation: slideIn 0.5s ease-out forwards;
+}
+
+.slide-out {
+  animation: slideOut 0.5s ease-out forwards;
+}
+
+
+.highlight-block {
+  animation: highlightBlock 1s ease-out forwards;
+}
+
+.active-block, .highlight-block:hover {
+  cursor: pointer;
+  background-color: #45d7b578 !important;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.6);
+    opacity: 1;
+  }
+  70% {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(0.6);
+    opacity: 1;
+  }
+}
+
+.pulse-circle {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  background-color: #45d7b6; /* Or your desired color */
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%); /* Start below the screen */
+  }
+  to {
+    transform: translateY(0); /* End at the normal position */
+  }
+}
+
+.slide-up {
+  animation: slideUp 0.2s ease-out forwards;
 }

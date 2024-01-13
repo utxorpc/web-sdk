@@ -9,10 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "react": "^18",
-    "react-dom": "^18",
+    "@uiw/react-json-view": "^2.0.0-alpha.11",
+    "@utxorpc-web/sdk": "../../",
     "next": "14.0.4",
-    "@utxorpc-web/sdk": "../../"
+    "react": "^18",
+    "react-dom": "^18"
   },
   "devDependencies": {
     "typescript": "^5",

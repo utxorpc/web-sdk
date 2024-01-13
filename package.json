@@ -29,6 +29,6 @@
     "@bufbuild/connect": "^0.10.1",
     "@bufbuild/connect-web": "^0.10.1",
     "@utxorpc-web/cardano-spec": "^1.0.0-alpha.0",
-    "@utxorpc-web/sync-spec": "^1.0.0-alpha.1"
+    "@utxorpc-web/sync-spec": "/home/rawriclark/Projects/spec/sync/gen/web"
   }
 }

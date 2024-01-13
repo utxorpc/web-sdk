@@ -1,12 +1,7 @@
-// import { Block } from "@utxorpc-web/cardano-spec/utxorpc/cardano/v1/cardano_pb.js";
 import { PromiseClient, createPromiseClient } from "@bufbuild/connect";
 import { createGrpcWebTransport } from "@bufbuild/connect-web";
-import { Block } from "@utxorpc-web/cardano-spec/utxorpc/cardano/v1/cardano_pb.js";
-import { ChainSyncService } from "@utxorpc-web/sync-spec/utxorpc/sync/v1/sync_connect.js";
-import {
-  BlockRef,
-  FollowTipResponse,
-} from "@utxorpc-web/sync-spec/utxorpc/sync/v1/sync_pb.js";
+import { Block } from "@utxorpc-web/cardano-spec";
+import { BlockRef, ChainSyncService, FollowTipResponse } from "@utxorpc-web/sync-spec";
 
 export type ChainTipEventType = "apply" | "undo" | "reset";
 
